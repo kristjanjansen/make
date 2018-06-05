@@ -1,3 +1,4 @@
+
 // Set up the SVG scene
 
 make = m = new Rune({ container: "#rune", width: 5000, height: 5000, debug: true })
@@ -40,7 +41,7 @@ random = gimme = something = anything = (a, b) => {
         b = a
         a = 0
     }
-    return round(a + Math.random() * (b - a), 2)
+    return Math.floor(round(a + Math.random() * (b - a), 2))
 }
 
 scale = sc = (value, start1, stop1, start2, stop2) => {
@@ -187,7 +188,7 @@ parseSheet = async data => {
 
 // Animations
 
-spin = (target, rotationX = 0, rotationY = 0, duration = 10000) => {
+spin = (target, rotationX = 0, rotationY = 0, duration = 10000, reverse = false) => {
     target.state.rotationX = rotationX
     target.state.rotationY = rotationY
     target.changed()
@@ -197,7 +198,8 @@ spin = (target, rotationX = 0, rotationY = 0, duration = 10000) => {
         update: () => { target.changed() },
         rotation: 359.999,
         easing: 'linear',
-        loop: true
+        loop: true,
+        direction: reverse ? 'reverse' : 'normal'
     })
 }
 

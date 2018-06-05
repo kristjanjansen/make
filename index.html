@@ -1,0 +1,104 @@
+<!DOCTYPE html><html><head></head><body>
+<div id="help"></div><div id="rune"></div>
+<script src="https://unpkg.com/rune.js@1.1.5/dist/rune.js"></script>
+<script src="https://unpkg.com/animejs"></script>
+<script src="./index.js"></script>
+<script>;(async () => {
+
+// Use Ctrl + / (or ⌘ + / on Mac) hotkeys to uncomment rows below
+
+// Lets draw a simple gray box with default colors:
+
+// make.rect(x = 100, y = 100, width = 50, height = 50)
+
+// You an make it even shorter and add some styling
+//
+// Colors available:
+// red, green, blue, yellow, lilac, orange, cyan, gray 
+
+// make.rect(200,100,50,50)
+//     .fill(green)
+//     .stroke(no)
+
+
+
+// You can also add transparency (between 0 to 1)
+
+// make.rect(300,100,50,50)
+//     .fill(green,0.5)
+//     .stroke(no)
+
+
+
+// You can also use R, G, B and optional transparency
+
+// make.rect(400,100,50,50)
+//     .fill(255,0,0,0.5)
+//     .stroke(no)
+
+
+
+// If you want grays (R = G = B) you can omit G and B
+
+// make.rect(500,100,50,50)
+//     .fill(128)
+//     .stroke(no)
+
+
+
+// You can also use
+// H(ue), S(aturation), (L)ightness/B(rightness)
+// and optional transparency
+
+// make.rect(600,100,50,50)
+//     .fill(hsl(0,100,50),0.5)
+//     .stroke(no)
+
+
+
+// And hey, why not a random color? Keep refreshing the page!
+// Note you can omit the S and L if you want defaults
+
+// make.rect(700,100,50,50)
+//     .fill(hsl(random(0,360)),0.5)
+//     .stroke(no)
+
+
+
+// Now, lets do fun stuff, make the computer do the boxes
+
+// numbers(13).step(50).add(100).each(x => {
+//     make.rect(x,200,50,50)
+//         .fill(hsl(random(0,360)),0.8)
+//         .stroke(no)
+// })
+
+
+
+// Also, boxes are so boring. Lets make some circles!
+
+// numbers(13).step(50).add(100).each(x => {
+//     make.circle(x,300,25)
+//         .fill(hsl(random(0,360)),0.4)
+//         .stroke(no)
+// })
+
+
+
+// Note that circles are drawn from the center
+// so to line them up we need to adjust them
+
+// radius = 25
+// numbers(13).step(50).add(100 + radius).each(x => {
+//     make.circle(x,300 + radius,radius)
+//         .fill(hsl(random(0,360)),0.8)
+//         .stroke(no)
+// })
+
+
+
+// More documentation:
+//
+// http://runemadsen.github.io/rune.js/
+
+make.play() })();</script></body></html>

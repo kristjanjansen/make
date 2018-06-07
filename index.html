@@ -1,27 +1,27 @@
-<!DOCTYPE html><html><head></head><body>
-<div id="help"></div><div id="rune"></div>
-<script src="https://unpkg.com/rune.js@1.1.5/dist/rune.js"></script>
-<script src="https://unpkg.com/animejs"></script>
-<script src="http://kristjanjansen.ee/make/index.js"></script>
-<script>;(async () => {
+<!DOCTYPE html><html><head></head><body><div id="help"></div><div id="rune"></div><script src="https://unpkg.com/rune.js@1.1.5/dist/rune.js"></script><script src="https://unpkg.com/animejs"></script><script src="http://kristjanjansen.ee/make/index.js"></script><script>;(async () => {
+
+
+// Lets draw a simple gray box with default colors
+// x,y,width,height
+
+make.rect(200,100,50,50)
+
+
+
+
+
+
+
+
 
 // Use Ctrl + / (or ⌘ + / on Mac) hotkeys to uncomment rows below
 
-
-// Lets draw a simple gray box with default colors:
-
-// make.rect(x = 100, y = 100, width = 50, height = 50)
-
-// You an make it even shorter and add some styling
-//
-// Colors available:
+// And add some styling, colors available:
 // red, green, blue, yellow, lilac, orange, cyan, gray 
 
-// make.rect(200,100,50,50)
+//  make.rect(200, 100, 50, 50)
 //     .fill(green)
 //     .stroke(no)
-
-
 
 // You can also add transparency (between 0 to 1)
 
@@ -30,32 +30,13 @@
 //     .stroke(no)
 
 
-
-// You can also use R, G, B and optional transparency
-
-// make.rect(400,100,50,50)
-//     .fill(255,0,0,0.5)
-//     .stroke(no)
-
-
-
-// If you want grays (R = G = B) you can omit G and B
-
-// make.rect(500,100,50,50)
-//     .fill(128)
-//     .stroke(no)
-
-
-
 // You can also use
-// H(ue), S(aturation), (L)ightness/B(rightness)
+// Hue (default 0), Saturation (default 100), Lightness (default 50)
 // and optional transparency
 
 // make.rect(600,100,50,50)
 //     .fill(hsl(0,100,50),0.5)
 //     .stroke(no)
-
-
 
 // And hey, why not a random color? Keep refreshing the page!
 // Note you can omit the S and L if you want defaults
@@ -98,8 +79,22 @@
 
 
 
-// More documentation:
-//
-// http://runemadsen.github.io/rune.js/
+// data = await google("1AFF3KB4xfmQj4UAnRk_v7jjv7fKbTulJ6KP9Kd3ebG8")
+
+// text("etknrlp").each((day, x) => {
+//     make.text(day,x * 50 + 150,50)
+//         .stroke(no)
+// })
+
+// data.get('category','laugh').show().each((person, row) => {
+//     make.text(person.name, 50, row * 50 + 105).stroke(no)
+//     text("etknrlp").each((day, index) => {
+//         make.circle(index * 50 + 150, row * 50 + 100, person[day] * 3)
+//             .fill(yellow, 0.8)
+//             .stroke(no)
+//     })
+// })
+
+
 
 make.play() })();</script></body></html>

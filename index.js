@@ -10,7 +10,6 @@ make.grid({ moduleWidth: 100, moduleHeight: 100, columns: 15, rows: 10 })
 
 // Add document styling and grid styling
 
-
 const el = document.createElement('style')
 el.innerText = `
     body { margin: 0; padding: 50px; font-family: sans-serif; }
@@ -122,6 +121,10 @@ Array.prototype.row = function(index) {
   return Object.values(this[index]);
 };
 
+Array.prototype.get = function (key, value) {
+    return this.filter(item => item[key] === value)
+};
+
 Array.prototype.withoutFirst = function (count = 1) {
     this.splice(0, count)
     return this
@@ -154,6 +157,15 @@ numbers = number = n = data = function(value) {
     }
     if (typeof value == 'number') {
         return Array.from({ length: value }, (v, i) => i)
+    }
+}
+
+text = t = function(value) {
+    if (arguments.length > 1) {
+      return [...arguments];
+    }
+    if (typeof value == "string") {
+      return value.split('');
     }
 }
 
